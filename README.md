@@ -1,5 +1,11 @@
 # gitlab-ci-laravel-deploy
 
+Modify from: https://gitlab.com/mehranrasulian/laravel-sample/blob/master/Dockerfile
+
+# Docker hub
+https://hub.docker.com/r/danny50610/gitlab-ci-laravel-deploy/
+
+# .gitlab-ci.yml Example
 ```
 deploy_production:
   tags:
