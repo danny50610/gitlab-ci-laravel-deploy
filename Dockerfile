@@ -1,7 +1,7 @@
 FROM php:7.1
 
 RUN apt-get update && \
-    apt-get install -qqy --no-install-recommends git curl libmcrypt-dev libjpeg-dev libpng-dev libfreetype6-dev libbz2-dev && \
+    apt-get install -qqy --no-install-recommends git curl libmcrypt-dev libjpeg-dev libpng-dev libfreetype6-dev libbz2-dev openssh-client && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-install mcrypt zip && \
