@@ -6,4 +6,5 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-install mcrypt zip && \
     curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    composer global require "laravel/envoy=~1.0"
+    composer global require "laravel/envoy=~1.0" --no-ansi --no-suggest --optimize-autoloader && \
+    envoy --version
