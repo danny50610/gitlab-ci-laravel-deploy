@@ -17,6 +17,7 @@ deploy_production:
     - eval $(ssh-agent -s)
     - ssh-add < (echo "$SSH_PRIVATE_KEY")
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - ~/.composer/vendor/bin/envoy --version
 
     - ~/.composer/vendor/bin/envoy run deploy
   environment:
